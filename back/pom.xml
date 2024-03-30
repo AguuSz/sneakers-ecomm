@@ -15,6 +15,7 @@
 	<description>E-commerce based on Stock X</description>
 	<properties>
 		<java.version>21</java.version>
+		<tomcat.scope>runtime</tomcat.scope>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,6 +52,20 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.33</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+
 
 	</dependencies>
 

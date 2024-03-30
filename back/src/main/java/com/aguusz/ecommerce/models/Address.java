@@ -1,5 +1,6 @@
 package com.aguusz.ecommerce.models;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,11 +22,17 @@ public class Address {
 
     private String name;
 
+    @Column(name = "address", nullable = false)
     private String address;
 
+    @Column(name = "zipcode", nullable = false)
     private String zipcode;
 
     private String phone;
+
+    private String apt;
+
+    private String floor;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "city_id", referencedColumnName = "id")

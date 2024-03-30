@@ -25,7 +25,7 @@ public class Size {
 
     private Integer stock;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product product;
 

@@ -26,16 +26,10 @@ public class Product {
     @Column(name = "photo_url")
     private String photoUrl;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "sub_brand_id", referencedColumnName = "id")
     private SubBrand subBrand;
 
     @OneToMany(mappedBy = "size")
     private Set<Size> sizes;
-
-    @ManyToMany(mappedBy = "products")
-    Set<ShoppingCart> shoppingCarts;
-
-    @ManyToMany(mappedBy = "products")
-    Set<PurchaseOrder> purchaseOrders;
 }
